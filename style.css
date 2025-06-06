@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: azure;
+}
+
+h2, h3 {
+    color:darkgreen;
+    transition: color 0.3s ease;
+}
+h1:hover {
+    color: #fff;
+}
+
+h2:hover {
+    color: #fff;
+}
+
+h3:hover {
+    color: #fff;
+}
+
+.bg-light {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}

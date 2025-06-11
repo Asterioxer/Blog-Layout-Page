@@ -1,5 +1,7 @@
 Here’s a well-structured README.md for your blog layout project:
 
+#don't mind me I was just getting experimental with the newly launched bot, rather testing it out
+
 Blog Layout Page
 Description
 This repository contains a blog layout page designed for showcasing articles in a structured manner. The preview image demonstrates a clean design with articles arranged side by side, each featuring distinct headings and content.

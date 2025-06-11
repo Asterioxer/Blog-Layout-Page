@@ -1,41 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
-    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #2C2F33; /* Changed */
+    color: #EAEAEA; /* Changed */
+    transition: background-color 0.3s ease; /* Kept existing transition, seems harmless */
+    position: relative; /* Needed if any child elements use absolute positioning relative to body */
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* New font */
+    color: #48D1CC; /* New accent color */
+    transition: color 0.3s ease, filter 0.3s ease; /* Added filter transition */
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    color: azure;
+    font-size: 2.5em; /* Preserved */
+    margin-bottom: 0.5em; /* Preserved */
+    /* color: azure; removed, handled by h1,h2,h3 rule */
 }
 
-h2, h3 {
-    color:darkgreen;
-    transition: color 0.3s ease;
-}
-h1:hover {
-    color: #fff;
+/* h2, h3 specific styles from original are covered by the common h1,h2,h3 rule now */
+
+h1:hover, h2:hover, h3:hover {
+    filter: brightness(1.2); /* New hover effect */
+    /* color: #fff; removed */
 }
 
-h2:hover {
-    color: #fff;
+a {
+    color: #48D1CC; /* New link color */
+    text-decoration: none; /* Remove underline by default */
 }
 
-h3:hover {
-    color: #fff;
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    filter: brightness(1.2); /* Brightness change on hover */
 }
 
+/* Bootstrap Overrides */
 .bg-light {
-    background-color: #333 !important;
-    color: #fff !important;
+    background-color: #333 !important; /* Preserved */
+    color: #EAEAEA !important; /* Ensured text contrast */
 }
 
-.bg-dark {
+.bg-dark { /* Preserved from original, though not explicitly requested to change */
     background-color: #343a40 !important;
 }
 
-.text-white {
+.text-white { /* Preserved from original */
     color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #EAEAEA; /* New link color */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #48D1CC; /* New hover/focus color */
+}
+
+.navbar-brand {
+    color: #48D1CC !important; /* New brand color */
+}
+
+/* General cleanup implicitly done by defining new styles.
+   Old h1:hover, h2:hover, h3:hover for color are removed/overridden.
+   Old h2, h3 color: darkgreen is overridden.
+   Old h1 color: azure is overridden.
+*/
+
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#interactive-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind all other content */
+    display: block; /* Ensure it behaves as a block element */
 }

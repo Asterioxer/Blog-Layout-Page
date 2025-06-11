@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="color: azure;">Tech Blog</title>
+    <title>Tech Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="interactive-background"></canvas>
     <header class="bg-light py-3">
         <div class="container">
-            <h1 style="text-align: center;">My Blog</h1>
+            <h1 style="text-align: center;">Tech Blog</h1>
         </div>
     </header>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tech Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <main class="container py-5">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 fade-in-scroll">
                 <h2><u>Solidroad</u> just raised $6.5M to reinvent customer service with AI that coaches, not replaces</h2>
                 <p>
                     Solidroad, an artificial intelligence startup that promises to solve one of customer service’s most persistent problems, has raised $6.5 million in seed funding to expand its platform that automatically trains customer service representatives and improves AI agents.
@@ -33,7 +56,7 @@
                     In an era where customer experience increasingly determines business success, the companies that figure out how to systematically improve rather than simply automate may discover they’ve built something far more valuable than a cost-cutting tool — they’ve created a competitive advantage that compounds over time.
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 fade-in-scroll">
                 <h3>Why Solidroad chose human augmentation over the AI replacement trend sweeping customer service</h3>
                 <p>The customer experience software market has exploded as companies recognize the revenue impact of customer satisfaction, but many existing solutions focus on either full automation or basic analytics rather than systematic improvement of human performance.
                     Traditional quality assurance tools typically require significant manual oversight and provide retrospective insights rather than proactive training. Meanwhile, fully automated AI agents, while promising cost savings, often struggle with complex or emotionally nuanced customer interactions, sometimes delivering what Hughes characterizes as “hallucinations” rather than helpful responses.
@@ -46,12 +69,14 @@
 
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
-            &copy; 2025 Soham Mukhwerjee. All rights reserved.
+            &copy; 2024 Soham Mukhwerjee. All rights reserved.
             <br>
             Credits: <a href="https://venturebeat.com" class="text-white">VentureBeat</a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="animations.js"></script>
+    <script src="background-animation.js"></script>
 </body>
 </html>
